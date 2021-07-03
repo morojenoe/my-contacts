@@ -1,0 +1,11 @@
+<div fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+  <mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput [formControl]="search">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <button class="add-icon" mat-mini-fab color="primary" aria-label="add contact" (click)="addContact()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

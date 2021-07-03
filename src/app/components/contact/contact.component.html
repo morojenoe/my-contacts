@@ -1,0 +1,28 @@
+<form [formGroup]="form" fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone number</mat-label>
+    <input matInput formControlName="phone">
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+
+  <button class="icon" mat-mini-fab color="primary" aria-label="edit" (click)="editContact()" *ngIf="!isEditing">
+    <mat-icon>edit</mat-icon>
+  </button>
+
+  <button class="icon" mat-mini-fab color="primary" aria-label="edit" (click)="saveContact()" *ngIf="isEditing">
+    <mat-icon>checkmark</mat-icon>
+  </button>
+
+  
+  <button class="icon" mat-mini-fab color="error" aria-label="delete" (click)="removeContact()">
+    <mat-icon>delete</mat-icon>
+  </button>
+  
+</form>
+

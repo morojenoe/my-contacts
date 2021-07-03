@@ -1,0 +1,12 @@
+<mat-toolbar>My Contacts</mat-toolbar>
+
+<div *ngIf="contacts$ | async as contacts" fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+
+  <div fxLayout="column" *ngIf="contacts.state === AsyncItemState.Loaded">
+    <app-search-bar></app-search-bar>
+
+    <app-contact [contact]="contact" *ngFor="let contact of contacts.data" (remove)="remove($event)" (edit)="edit($event)"></app-contact>
+  </div>
+
+  <mat-spinner *ngIf="contacts.state === AsyncItemState.Loading"></mat-spinner>
+</div>
