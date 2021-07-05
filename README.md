@@ -1,8 +1,10 @@
 # Запуск
 
-1) `npm install @angular/cli`
+1) `npm install
 
 2) `ng serve`
+
+3) `user: test, pass: test`
 
 # MyContacts
 
